@@ -9,17 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Pastel palette
+        // Primary colors only
         pastel: {
           pink: '#F9CDD5',      // Primary pink pastel
-          green: '#7A8450',     // Primary green pastel (adjusted to proper pastel)
-          green_light: '#A8D8B8', // Light pastel green
+          green: '#7A8450',     // Primary green pastel
           blue: '#B3D9E8',      // Pastel blue
-          purple: '#D4B3E8',    // Pastel purple
-          peach: '#F5D4B8',     // Pastel peach
-          yellow: '#F5E8B8',    // Pastel yellow
-          white: '#FAFAF8',     // Off-white
-          gray: '#E8E8E8',      // Light gray
         },
       },
       fontFamily: {
