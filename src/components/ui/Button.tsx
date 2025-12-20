@@ -13,13 +13,13 @@ export const Button = ({
   children,
   ...props
 }: ButtonProps) => {
-  const baseClasses = 'font-medium rounded-xl transition-all duration-200 ease-in-out';
+  const baseClasses = 'font-semibold rounded-lg transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 inline-flex items-center justify-center gap-2';
 
   const variants = {
-    primary: 'bg-pastel-pink text-gray-800 hover:bg-opacity-90 shadow-sm hover:shadow-md',
-    secondary: 'bg-pastel-green text-gray-800 hover:bg-opacity-90 shadow-sm hover:shadow-md',
-    outline: 'border-2 border-pastel-pink text-pastel-pink hover:bg-pastel-pink hover:text-gray-800',
-    ghost: 'text-pastel-green hover:bg-gray-100 hover:bg-opacity-50',
+    primary: 'bg-gray-900 text-white hover:bg-gray-800 focus:ring-gray-900/50 active:scale-95',
+    secondary: 'bg-gray-700 text-white hover:bg-gray-600 focus:ring-gray-700/50 active:scale-95',
+    outline: 'border border-gray-300 text-gray-900 hover:bg-gray-100 hover:border-gray-400 focus:ring-gray-400/30 active:scale-95',
+    ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-400/50 active:scale-95',
   };
 
   const sizes = {

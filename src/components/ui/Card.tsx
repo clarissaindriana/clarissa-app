@@ -10,12 +10,15 @@ export const Card = ({ children, className = '', hover = true }: CardProps) => {
   return (
     <div
       className={`
-        rounded-2xl bg-white p-6 shadow-sm border border-gray-200 border-opacity-50
-        ${hover ? 'transition-all duration-200 hover:shadow-md hover:border-pastel-pink hover:border-opacity-30' : ''}
+        rounded-lg bg-white p-6 
+        border border-gray-300 shadow-sm
+        ${hover ? 'transition-all duration-300 hover:shadow-md hover:border-gray-400' : ''}
         ${className}
       `}
     >
-      {children}
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 };

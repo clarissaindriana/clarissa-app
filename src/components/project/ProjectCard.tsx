@@ -11,65 +11,85 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <Card className="group overflow-hidden">
-      {/* Project Image Placeholder */}
-      <div className="aspect-video bg-gradient-to-br from-pastel-pink/20 to-pastel-blue/20 flex items-center justify-center relative overflow-hidden">
-        <div className="text-6xl opacity-50">
-          {project.category === 'university' ? '🎓' : '🚀'}
-        </div>
-        {project.featured && (
-          <div className="absolute top-4 right-4">
-            <span className="bg-pastel-pink text-white px-2 py-1 rounded-full text-xs font-medium">
-              Featured
-            </span>
+    <Link href={`/projects/${project.slug}`}>
+      <div className="group relative h-full cursor-pointer">
+        {/* Mac Terminal-style card container - Light Theme */}
+        <div className="h-full flex flex-col bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg relative border border-gray-300 hover:border-gray-400">
+          
+          {/* Mac Terminal Header */}
+          <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-300">
+            {/* Traffic light buttons */}
+            <div className="flex gap-2">
+              <div className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors cursor-pointer"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors cursor-pointer"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors cursor-pointer"></div>
+            </div>
+            {/* Terminal path */}
+            <span className="text-xs text-gray-600 ml-2 font-mono">~/projects/{project.slug}</span>
           </div>
-        )}
-      </div>
 
-      <div className="p-6">
-        <div className="flex items-start justify-between mb-3">
-          <h3 className="text-xl font-semibold text-gray-800 group-hover:text-pastel-pink transition-colors">
-            {project.title}
-          </h3>
-          <span className={`text-xs px-2 py-1 rounded-full ${
-            project.category === 'university'
-              ? 'bg-pastel-green/20 text-pastel-green'
-              : 'bg-pastel-blue/20 text-pastel-blue'
-          }`}>
-            {project.category}
-          </span>
+          {/* Terminal content */}
+          <div className="p-4 sm:p-6 flex-1 flex flex-col font-mono text-sm bg-white overflow-hidden">
+            
+            {/* Project command simulation */}
+            <div className="mb-4">
+              <div className="text-gray-700 flex items-start gap-2">
+                <span className="flex-shrink-0">$</span>
+                <span className="break-words">project --info</span>
+              </div>
+            </div>
+
+            {/* Project title */}
+            <div className="mb-3">
+              <span className="text-blue-600">name</span>
+              <span className="text-gray-400">:</span>
+              <span className="text-gray-900 ml-2 font-semibold">{project.title}</span>
+            </div>
+
+            {/* Project description */}
+            <div className="mb-3">
+              <span className="text-blue-600">description</span>
+              <span className="text-gray-400">:</span>
+              <span className="text-gray-700 ml-2 line-clamp-2">{project.description}</span>
+            </div>
+
+            {/* Tech stack */}
+            <div className="mb-4">
+              <span className="text-blue-600">stack</span>
+              <span className="text-gray-400">:</span>
+              <div className="mt-2 ml-2 flex flex-wrap gap-2">
+                {project.techStack.slice(0, 5).map((tech) => (
+                  <span key={tech} className="text-orange-600 px-2 py-1 bg-orange-50 rounded text-xs font-mono border border-orange-200">
+                    {tech}
+                  </span>
+                ))}
+                {project.techStack.length > 5 && (
+                  <span className="text-gray-600 px-2 py-1 bg-gray-100 rounded text-xs font-mono border border-gray-300">
+                    +{project.techStack.length - 5}
+                  </span>
+                )}
+              </div>
+            </div>
+
+            {/* Featured status */}
+            {project.featured && (
+              <div className="mb-4">
+                <span className="text-purple-600">featured</span>
+                <span className="text-gray-400">:</span>
+                <span className="text-green-600 ml-2 font-semibold">true</span>
+              </div>
+            )}
+
+            {/* View project command */}
+            <div className="mt-auto pt-2 border-t border-gray-300">
+              <div className="text-gray-700 flex items-start gap-2 group-hover:text-gray-900 transition-colors cursor-pointer">
+                <span className="flex-shrink-0">$</span>
+                <span className="break-words">view project <span className="text-gray-400">→</span></span>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <p className="text-gray-600 mb-4 line-clamp-3">
-          {project.description}
-        </p>
-
-        <TechStack technologies={project.techStack} className="mb-4" />
-
-        <div className="flex gap-3">
-          <Link href={`/projects/${project.slug}`}>
-            <Button variant="outline" size="sm">
-              View Details
-            </Button>
-          </Link>
-          {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="sm">
-                Live Demo
-              </Button>
-            </a>
-          )}
-          {project.githubUrl && (
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="sm">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-              </Button>
-            </a>
-          )}
-        </div>
       </div>
-    </Card>
+    </Link>
   );
 };
