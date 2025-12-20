@@ -15,11 +15,11 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'E-Commerce Platform',
-    slug: 'e-commerce-platform',
-    description: 'A full-stack e-commerce website with user authentication, product catalog, and payment integration.',
-    longDescription: 'This project showcases a complete e-commerce solution built with modern web technologies. Features include user registration/login, product browsing, shopping cart, checkout process, and order management. The backend handles inventory, user data, and payment processing securely.',
-    techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
+    title: 'Lume E-Commerce Platform',
+    slug: 'lume-e-commerce-platform',
+    description: 'A security-focused full-stack e-commerce platform emphasizing safe authentication, data protection, and secure transactions.',
+    longDescription: 'Lume is a full-stack e-commerce website built with security-oriented programming principles. It features secure user authentication, protected product browsing, shopping cart and checkout flows, and robust order management. The system is designed with careful handling of user data, input validation, access control, and secure transaction processing to ensure reliability and trust throughout the platform.',
+    techStack: ['Django', 'Python', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
     category: 'university',
     image: '/project-images/ecommerce.jpg',
     githubUrl: 'https://github.com/username/ecommerce-platform',

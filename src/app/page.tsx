@@ -29,10 +29,10 @@ export default function Home() {
         <Container>
           <div className="text-center mb-10 sm:mb-16 lg:mb-20 relative z-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-              Featured <span className="text-gray-900">Projects</span>
+              Learning by <span className="text-gray-900">Building</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 font-light">
-              Interactive projects showcasing my skills in web development and creative design.
+              These projects reflect how I learn computer science by building, experimenting, and improving along the way.
             </p>
           </div>
 

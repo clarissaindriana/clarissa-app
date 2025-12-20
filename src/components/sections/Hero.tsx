@@ -85,16 +85,15 @@ export const Hero = () => {
         </h1>
 
         <h2 className="text-lg sm:text-2xl lg:text-3xl text-gray-700 mb-4 md:mb-8 font-light animate-float" style={{ animationDelay: '0.1s' }}>
-          <span className="font-bold text-gray-900">Computer Science Student</span> &{' '}
-          <span className="font-bold text-gray-900">Web Developer</span>
+          <span className="font-bold text-gray-900">Computer Science Student</span> 
+          {/* <span className="font-bold text-gray-900">Web Developer</span> */}
         </h2>
 
         <p className="text-sm sm:text-lg text-gray-600 mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-light animate-float" style={{ animationDelay: '0.2s' }}>
-          Crafting{' '}
-          <span className="font-bold text-gray-900">elegant digital experiences</span> with a
-          passion for{' '}
-          <span className="font-bold text-gray-900">clean code</span> and beautiful design. I
-          transform ideas into functional, accessible, and visually stunning web applications.
+          Not a know-it-all, just a{' '}
+          <span className="font-bold text-gray-900">curious computer science student</span> who grows by learning, building, and exploring across disciplines.
+          {/* <span className="font-bold text-gray-900"> learning, building,</span> and
+          <span className="font-bold text-gray-900"> exploring across disciplines.</span>  */}
         </p>
 
         {/* Animated Terminal Section */}
@@ -125,7 +124,7 @@ export const Hero = () => {
               <div className="text-gray-600 mb-2 min-h-5 h-5">
                 <span className="text-green-600">$</span>
                 <span className="text-gray-900 ml-2">
-                  <span className="typing-2">git commit -m <span className="text-red-600">"feat: amazing projects"</span></span>
+                  <span className="typing-2">git commit -m <span className="text-red-600">"feat: clarissa's projects"</span></span>
                   <span className="cursor"></span>
                 </span>
               </div>
@@ -134,7 +133,7 @@ export const Hero = () => {
               <div className="text-gray-600 mb-2 min-h-5 h-5">
                 <span className="text-green-600">$</span>
                 <span className="text-gray-900 ml-2">
-                  <span className="typing-3">git push origin main</span>
+                  <span className="typing-3">git push -u origin main</span>
                   <span className="cursor"></span>
                 </span>
               </div>
