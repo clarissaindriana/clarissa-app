@@ -85,7 +85,7 @@ export const Hero = () => {
         </h1>
 
         <h2 className="text-lg sm:text-2xl lg:text-3xl text-gray-700 mb-4 md:mb-8 font-light animate-float" style={{ animationDelay: '0.1s' }}>
-          <span className="font-bold text-gray-900">Computer Science Student</span> 
+          <span className="font-bold text-gray-900">Information System Student at Universitas Indonesia</span> 
           {/* <span className="font-bold text-gray-900">Web Developer</span> */}
         </h2>
 

@@ -1,136 +1,35 @@
 import React from 'react';
+import Image from 'next/image';
+
+interface TechStackItem {
+  name: string;
+  image: string;
+}
 
 export const Skills = () => {
-  const techStack = [
-    { name: 'Java', logo: 'Java' },
-    { name: 'Spring Boot', logo: 'Spring' },
-    { name: 'Python', logo: 'Python' },
-    { name: 'Go', logo: 'Go' },
-    { name: 'Django', logo: 'Django' },
-    { name: 'HTML', logo: 'HTML' },
-    { name: 'CSS', logo: 'CSS' },
-    { name: 'Vue', logo: 'Vue' },
-    { name: 'JavaScript', logo: 'JS' },
-    { name: 'React', logo: 'React' },
-    { name: 'TypeScript', logo: 'TS' },
-    { name: 'Vite', logo: 'Vite' },
-    { name: 'Next.js', logo: 'Next' },
-    { name: 'Docker', logo: '🐳' },
-    { name: 'Kubernetes', logo: 'K8s' },
-    { name: 'AWS', logo: 'AWS' },
+  const techStack: TechStackItem[] = [
+    { name: 'Java', image: '/images/java.png' },
+    { name: 'Spring Boot', image: '/images/springboot.png' },
+    { name: 'Python', image: '/images/python.png' },
+    { name: 'Go', image: '/images/golang.png' },
+    { name: 'Django', image: '/images/django.png' },
+    { name: 'Flutter', image: '/images/flutter.png' },
+    { name: 'HTML', image: '/images/html.png' },
+    { name: 'CSS', image: '/images/css.png' },
+    { name: 'Vue', image: '/images/vue.png' },
+    { name: 'JavaScript', image: '/images/js.png' },
+    { name: 'React', image: '/images/react.png' },
+    { name: 'TypeScript', image: '/images/ts.png' },
+    { name: 'Vite', image: '/images/vite.png' },
+    { name: 'Next.js', image: '/images/next-js.png' },
+    { name: 'PostgreSQL', image: '/images/postgresql.png' },
+    { name: 'MongoDB', image: '/images/mongodb.png' },
+    { name: 'Supabase', image: '/images/supabase.png' },
+    { name: 'Spark', image: '/images/spark.png' },
+    { name: 'Docker', image: '/images/docker.png' },
+    { name: 'Kubernetes', image: '/images/kubernetes.png' },
+    { name: 'AWS EC2', image: '/images/ec2.png' },
   ];
-
-  const getLogoStyle = (name: string) => {
-    const logoStyles: Record<string, React.CSSProperties> = {
-      Java: {
-        fontSize: '2.5rem',
-        fontWeight: 'bold',
-        background: 'linear-gradient(135deg, #FF6B00 0%, #FFB800 100%)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
-      },
-      Spring: {
-        fontSize: '2.5rem',
-        color: '#6DB33F',
-        fontWeight: 'bold',
-      },
-      Python: {
-        fontSize: '2.5rem',
-        background: 'linear-gradient(135deg, #3776AB 0%, #FFD43B 100%)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
-        fontWeight: 'bold',
-      },
-      Go: {
-        fontSize: '2.5rem',
-        color: '#00ADD8',
-        fontWeight: 'bold',
-      },
-      Django: {
-        fontSize: '2.5rem',
-        color: '#092E20',
-        fontWeight: 'bold',
-      },
-      HTML: {
-        fontSize: '2.5rem',
-        color: '#E34C26',
-        fontWeight: 'bold',
-      },
-      CSS: {
-        fontSize: '2.5rem',
-        color: '#1572B6',
-        fontWeight: 'bold',
-      },
-      Vue: {
-        fontSize: '2.5rem',
-        color: '#4FC08D',
-        fontWeight: 'bold',
-      },
-      JS: {
-        fontSize: '2.5rem',
-        color: '#F7DF1E',
-        fontWeight: 'bold',
-      },
-      React: {
-        fontSize: '2.5rem',
-        color: '#61DAFB',
-        fontWeight: 'bold',
-      },
-      TS: {
-        fontSize: '2.5rem',
-        color: '#3178C6',
-        fontWeight: 'bold',
-      },
-      Vite: {
-        fontSize: '2.5rem',
-        background: 'linear-gradient(135deg, #646CFF 0%, #F64DB8 100%)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
-        fontWeight: 'bold',
-      },
-      Next: {
-        fontSize: '2.5rem',
-        color: '#000000',
-        fontWeight: 'bold',
-      },
-      AWS: {
-        fontSize: '2.5rem',
-        color: '#FF9900',
-        fontWeight: 'bold',
-      },
-      K8s: {
-        fontSize: '2.5rem',
-        color: '#326CE5',
-        fontWeight: 'bold',
-      },
-    };
-    return logoStyles[name] || { fontSize: '2.5rem', fontWeight: 'bold' };
-  };
-
-  const getDisplayLogo = (name: string) => {
-    const logos: Record<string, string> = {
-      Java: '☕',
-      Spring: '🍃',
-      Python: '🐍',
-      Go: '🐹',
-      Django: '🎯',
-      HTML: '⟨⟩',
-      CSS: '❧',
-      Vue: '✔',
-      JS: '⚡',
-      React: '⚛',
-      TS: 'TS',
-      Vite: '⚙',
-      Next: '▲',
-      '🐳': '🐳',
-      K8s: '☸',
-      AWS: '◆',
-    };
-    return logos[name] || name;
-  };
 
   return (
     <section className="py-16 sm:py-20 lg:py-28 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative">
@@ -146,27 +45,31 @@ export const Skills = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 leading-tight">
-            Here's My <span className="text-black">Stack</span>
+            Tech <span className="text-black">Stack</span>
           </h2>
           <p className="text-base sm:text-lg text-black/70 max-w-2xl mx-auto font-light">
-            Technologies and tools I work with to build amazing things.
+            The technologies I use to build full-stack applications—from backend services and APIs to modern frontends and cloud deployment.
           </p>
         </div>
 
         {/* Tech Stack Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-lg border border-black/10 hover:border-black hover:bg-black/5 transition-all duration-300 group cursor-pointer"
+              className="flex flex-col items-center justify-center p-3 sm:p-5 lg:p-6 rounded-lg transition-all duration-300 group cursor-pointer hover:scale-105"
             >
-              <span
-                className="mb-2 group-hover:scale-110 transition-transform block"
-                style={getLogoStyle(tech.logo)}
-              >
-                {getDisplayLogo(tech.logo)}
-              </span>
-              <p className="text-xs sm:text-sm font-medium text-black text-center">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-2 sm:mb-3 flex items-center justify-center group-hover:drop-shadow-lg transition-all duration-300">
+                <Image
+                  src={tech.image}
+                  alt={tech.name}
+                  width={64}
+                  height={64}
+                  className="object-contain w-full h-full"
+                  priority
+                />
+              </div>
+              <p className="text-xs sm:text-sm font-medium text-black text-center group-hover:text-black/80 transition-colors">
                 {tech.name}
               </p>
             </div>

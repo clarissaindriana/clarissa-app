@@ -6,6 +6,7 @@ import { ProjectCarousel } from '../components/project/ProjectCarousel';
 import { Button } from '../components/ui/Button';
 import { Container } from '../components/layout/Container';
 import { projects } from '../data/projects';
+import { experiences } from '../data/experience';
 
 export default function Home() {
   return (
