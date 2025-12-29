@@ -105,7 +105,7 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                     <span>View Code</span>
                   </a>
                 )}
-                {project.liveUrl && (
+                {/* {project.liveUrl && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
@@ -115,7 +115,7 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                     <ExternalLink className="w-4 h-4" />
                     <span>Live Demo</span>
                   </a>
-                )}
+                )} */}
               </div>
             </div>
 
@@ -127,13 +127,13 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
               
               {projectImages.length > 0 ? (
                 <div className="relative w-full max-w-2xl">
-                  {/* Image Display */}
-                  <div className="relative aspect-video bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+                  {/* Image Display - No Container, Direct Placement */}
+                  <div className="relative w-full h-[500px]">
                     <Image
                       src={projectImages[currentImageIndex]}
                       alt={`${project.title} screenshot ${currentImageIndex + 1}`}
                       fill
-                      className="object-contain p-4"
+                      className="object-contain drop-shadow-2xl"
                       priority
                     />
                     
@@ -142,13 +142,13 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                       <>
                         <button
                           onClick={prevImage}
-                          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all hover:scale-110"
+                          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all hover:scale-110 z-10"
                         >
                           <ChevronLeft className="w-5 h-5 text-gray-900" />
                         </button>
                         <button
                           onClick={nextImage}
-                          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all hover:scale-110"
+                          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all hover:scale-110 z-10"
                         >
                           <ChevronRight className="w-5 h-5 text-gray-900" />
                         </button>
@@ -174,7 +174,7 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                   )}
 
                   {/* Floating Info Cards */}
-                  <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 border border-gray-200 hidden lg:block">
+                  {/* <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 border border-gray-200 hidden lg:block">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                         <span className="text-white font-bold text-lg">✓</span>
@@ -184,7 +184,7 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                         <p className="text-sm font-bold text-gray-900">Completed</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-4 border border-gray-200 hidden lg:block">
                     <div className="flex items-center gap-3">
