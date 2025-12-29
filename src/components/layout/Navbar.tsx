@@ -12,9 +12,7 @@ export const Navbar = () => {
   const navItems = [
     { href: '/', label: 'Home', icon: '🏠' },
     { href: '/about', label: 'About', icon: '👤' },
-    { href: '/experience', label: 'Experience', icon: '💼' },
     { href: '/projects', label: 'Projects', icon: '🎨' },
-    { href: '/playground', label: 'Playground', icon: '⚡' },
     { href: '/contact', label: 'Contact', icon: '✉️' },
   ];
 

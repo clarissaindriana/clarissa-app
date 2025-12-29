@@ -7,6 +7,7 @@ export interface Project {
   techStack: string[];
   category: 'university' | 'personal';
   image?: string;
+  images?: string[];
   githubUrl?: string;
   liveUrl?: string;
   featured: boolean;
@@ -19,12 +20,12 @@ export const projects: Project[] = [
     slug: 'flight-booking-backend',
     description: 'A RESTful, microservice-based flight booking backend deployed on AWS, designed for secure, scalable, and decoupled system integration.',
     longDescription: 'A RESTful flight booking backend built with Spring Boot using a microservices architecture for scalability and low coupling. Services are deployed independently on AWS EC2 and exposed through clean REST APIs, with authentication handled by a separate auth microservice. The system is containerized with Docker, orchestrated using Kubernetes, and deployed via a GitLab CI/CD pipeline, showcasing production-ready backend, cloud, and DevOps practices.',
-    techStack: ['Spring Boot', 'RESTful API', 'Microservice', 'JWT', 'RBAC', 'Kubernetes', 'Docker', 'AWS EC2', 'GitLab CI/CD'],
+    techStack: ['Spring Boot', 'RESTful API', 'Microservice', 'JWT', 'RBAC', 'Kubernetes', 'Docker', 'AWS EC2', 'GitLab CI/CD', 'Postman'],
     category: 'university',
-    image: '/project-images/ecommerce.jpg',
+    images: ['/images/projects/flight-1.png', '/images/projects/flight-2.png'],
     githubUrl: 'https://github.com/username/ecommerce-platform',
     liveUrl: 'https://ecommerce-demo.vercel.app',
-    featured: true,
+    featured: false,
   },
   {
     id: '2',
@@ -37,7 +38,7 @@ export const projects: Project[] = [
     image: '/project-images/weather.jpg',
     githubUrl: 'https://github.com/username/weather-dashboard',
     liveUrl: 'https://weather-app-demo.vercel.app',
-    featured: true,
+    featured: false,
   },
   {
     id: '3',
@@ -50,7 +51,7 @@ export const projects: Project[] = [
     image: '/project-images/taskmanager.jpg',
     githubUrl: 'https://github.com/username/task-manager',
     liveUrl: 'https://taskmanager-demo.vercel.app',
-    featured: false,
+    featured: true,
   },
   {
     id: '4',
@@ -63,7 +64,7 @@ export const projects: Project[] = [
     image: '/project-images/portfolio.jpg',
     githubUrl: 'https://github.com/username/portfolio',
     liveUrl: 'https://portfolio-demo.vercel.app',
-    featured: true,
+    featured: false,
   },
   {
     id: '5',
@@ -76,7 +77,7 @@ export const projects: Project[] = [
     image: '/project-images/recipe.jpg',
     githubUrl: 'https://github.com/username/recipe-finder',
     liveUrl: 'https://recipe-app-demo.vercel.app',
-    featured: false,
+    featured: true,
   },
   {
     id: '6',
@@ -89,6 +90,6 @@ export const projects: Project[] = [
     image: '/project-images/dataviz.jpg',
     githubUrl: 'https://github.com/username/data-viz',
     liveUrl: 'https://dataviz-demo.vercel.app',
-    featured: false,
+    featured: true,
   },
 ];
