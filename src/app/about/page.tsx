@@ -16,12 +16,12 @@ export default function About() {
         }
       `}</style>
 
-      <Container className="py-16">
+      <Container className="py-10">
         <div className="max-w-5xl mx-auto">
-          {/* Title - Outside Window */}
+          {/* Title - Outside Window
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-12 animate-float" style={{ animationDelay: '0.1s' }}>
             About <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Me</span>
-          </h1>
+          </h1> */}
 
           {/* Apple-style Window with 2 Columns */}
           <div className="bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-200 animate-float" style={{ animationDelay: '0.2s' }}>
@@ -47,7 +47,7 @@ export default function About() {
                     <span className="text-6xl">👩‍💻</span>
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-1">Clarissa</h2>
-                  <p className="text-gray-600 text-lg mb-1">Information System Student</p>
+                  <p className="text-gray-600 text-lg mb-1">Information System Student and Teaching Assistant</p>
                   <p className="text-gray-500 text-sm">Universitas Indonesia</p>
                   
                   {/* Interests Section */}
