@@ -22,28 +22,6 @@ export default function Projects() {
           {/* Projects Grid */}
           <ProjectGrid projects={projects} />
 
-          {/* Stats Section */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pastel-pink mb-2">
-                {projects.filter(p => p.category === 'university').length}
-              </div>
-              <p className="text-gray-600">University Projects</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pastel-blue mb-2">
-                {projects.filter(p => p.category === 'personal').length}
-              </div>
-              <p className="text-gray-600">Personal Projects</p>
-            </div>
-            {/* <div className="text-center">
-              <div className="text-4xl font-bold text-pastel-green mb-2">
-                {projects.filter(p => p.liveUrl).length}
-              </div>
-              <p className="text-gray-600">Live Demos</p>
-            </div> */}
-          </div>
-
           {/* Technologies Used */}
           <div className="mt-16 text-center">
             <h2 className="text-2xl font-semibold text-gray-800 mb-8">
