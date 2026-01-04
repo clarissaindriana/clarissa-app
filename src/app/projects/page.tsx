@@ -36,12 +36,12 @@ export default function Projects() {
               </div>
               <p className="text-gray-600">Personal Projects</p>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="text-4xl font-bold text-pastel-green mb-2">
                 {projects.filter(p => p.liveUrl).length}
               </div>
               <p className="text-gray-600">Live Demos</p>
-            </div>
+            </div> */}
           </div>
 
           {/* Technologies Used */}

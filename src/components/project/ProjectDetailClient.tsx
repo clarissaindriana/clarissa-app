@@ -199,8 +199,10 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                   </div>
                 </div>
               ) : (
-                <div className="text-center text-gray-400">
-                  <p>No preview available</p>
+                <div className="flex flex-col items-center justify-center h-[500px] text-center">
+                  <div className="mb-4 text-6xl opacity-30">🖼️</div>
+                  <p className="text-lg font-semibold text-gray-400 mb-2">Images Currently Not Available</p>
+                  <p className="text-sm text-gray-500 max-w-xs">Check back soon for project screenshots and visual demonstrations</p>
                 </div>
               )}
             </div>
@@ -210,38 +212,7 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
           <div className="border-t border-gray-200 bg-gray-50/50 p-8 sm:p-12 lg:p-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Key Features</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: '🏗️',
-                  title: 'Microservices',
-                  description: 'Independent, scalable service architecture'
-                },
-                {
-                  icon: '🔌',
-                  title: 'RESTful API',
-                  description: 'Clean, documented REST endpoints'
-                },
-                {
-                  icon: '☁️',
-                  title: 'Cloud-Native',
-                  description: 'Deployed on AWS with Kubernetes'
-                },
-                {
-                  icon: '🔐',
-                  title: 'Secure Auth',
-                  description: 'JWT & RBAC authentication'
-                },
-                {
-                  icon: '🚀',
-                  title: 'CI/CD Pipeline',
-                  description: 'Automated GitLab deployment'
-                },
-                {
-                  icon: '🐳',
-                  title: 'Containerized',
-                  description: 'Docker-based deployment'
-                }
-              ].map((feature, index) => (
+              {project.keyFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="group p-6 bg-white rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-200"
