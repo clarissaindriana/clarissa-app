@@ -199,10 +199,22 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                   </div>
                 </div>
               ) : (
-                <div className="flex flex-col items-center justify-center h-[500px] text-center">
-                  <div className="mb-4 text-6xl opacity-30">🖼️</div>
-                  <p className="text-lg font-semibold text-gray-400 mb-2">Images Currently Not Available</p>
-                  <p className="text-sm text-gray-500 max-w-xs">Check back soon for project screenshots and visual demonstrations</p>
+                <div className="flex flex-col items-center justify-center h-[500px]">
+                  {/* iPhone Mockup */}
+                  <div className="relative w-64 h-[600px]">
+                    {/* Phone frame */}
+                    <div className="absolute inset-0 bg-black rounded-3xl shadow-2xl border-8 border-gray-900 overflow-hidden">
+                      {/* Notch */}
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-5 bg-black rounded-b-2xl z-20"></div>
+                      
+                      {/* Screen content */}
+                      <div className="w-full h-full bg-gradient-to-br from-gray-50 via-white to-gray-100 pt-8 px-4 flex flex-col items-center justify-center text-center">
+                        <div className="mb-3 text-4xl opacity-40">🖼️</div>
+                        <p className="text-sm font-semibold text-gray-400 mb-1">Images Currently Not Available</p>
+                        <p className="text-xs text-gray-500 max-w-xs leading-relaxed">Check back soon for project screenshots</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -211,7 +223,7 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
           {/* Key Features Section - Full Width Bottom */}
           <div className="border-t border-gray-200 bg-gray-50/50 p-8 sm:p-12 lg:p-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Key Features</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {project.keyFeatures.map((feature, index) => (
                 <div
                   key={index}
