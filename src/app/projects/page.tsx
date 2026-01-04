@@ -6,7 +6,7 @@ import { projects } from '../../data/projects';
 export default function Projects() {
   return (
     <main className="min-h-screen pt-16">
-      <Container className="py-20">
+      <Container className="py-10">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
