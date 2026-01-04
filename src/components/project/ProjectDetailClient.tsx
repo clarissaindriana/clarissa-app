@@ -12,6 +12,7 @@ interface ProjectDetailClientProps {
 
 export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [expandedTechStack, setExpandedTechStack] = useState(false);
   const projectImages = project.images || (project.image ? [project.image] : []);
 
   const nextImage = () => {
@@ -73,7 +74,7 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                   Featured Technologies
                 </h2>
                 <div className="grid grid-cols-2 gap-3">
-                  {project.techStack.slice(0, 6).map((tech, index) => (
+                  {(expandedTechStack ? project.techStack : project.techStack.slice(0, 6)).map((tech, index) => (
                     <div
                       key={index}
                       className="flex items-center gap-2 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 hover:border-gray-300 transition-all"
@@ -83,11 +84,14 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                     </div>
                   ))}
                   {project.techStack.length > 6 && (
-                    <div className="flex items-center gap-2 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg">
-                      <span className="text-sm font-medium text-gray-500">
-                        +{project.techStack.length - 6} more
+                    <button
+                      onClick={() => setExpandedTechStack(!expandedTechStack)}
+                      className="flex items-center gap-2 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-300 transition-all cursor-pointer"
+                    >
+                      <span className="text-sm font-medium text-gray-500 hover:text-blue-600">
+                        {expandedTechStack ? 'Show less' : `+${project.techStack.length - 6} more`}
                       </span>
-                    </div>
+                    </button>
                   )}
                 </div>
               </div>
@@ -221,17 +225,17 @@ export const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
           </div>
 
           {/* Key Features Section - Full Width Bottom */}
-          <div className="border-t border-gray-200 bg-gray-50/50 p-8 sm:p-12 lg:p-16">
+          <div className="border-t border-gray-200 bg-gray-50/50 p-6 sm:p-12 lg:p-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Key Features</h2>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {project.keyFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="group p-6 bg-white rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-200"
+                  className="group p-4 sm:p-6 bg-white rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-200"
                 >
                   <div className="text-3xl mb-3">{feature.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
