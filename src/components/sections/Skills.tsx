@@ -53,7 +53,7 @@ export const Skills = () => {
         </div>
 
         {/* Tech Stack Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
           {techStack.map((tech) => (
             <div
               key={tech.name}
