@@ -16,7 +16,7 @@ export default function About() {
         }
       `}</style>
 
-      <Container className="py-20">
+      <Container className="py-16">
         <div className="max-w-5xl mx-auto">
           {/* Title - Outside Window
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-12 animate-float" style={{ animationDelay: '0.1s' }}>

@@ -10,10 +10,10 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               My Projects
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               A collection of my work, from university assignments to personal explorations.
               Each project represents a learning experience and a step in my development journey.
             </p>
@@ -24,7 +24,7 @@ export default function Projects() {
 
           {/* Technologies Used */}
           <div className="mt-16 text-center">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">
               Technologies I've Worked With
             </h2>
             <div className="flex flex-wrap justify-center gap-3">

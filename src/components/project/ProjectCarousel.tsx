@@ -52,6 +52,7 @@ export const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
   const handleTouchStart = (e: React.TouchEvent) => {
     setIsDragging(true);
     setStartX(e.touches[0].clientX);
+    setCurrentX(e.touches[0].clientX);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -59,11 +60,13 @@ export const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
     setCurrentX(e.touches[0].clientX);
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e: React.TouchEvent) => {
     if (!isDragging) return;
     setIsDragging(false);
 
     const diff = startX - currentX;
+    // Only navigate if swipe distance is significant (> 50px)
+    // This prevents accidental navigation on tap/click
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
         handleNext();
@@ -93,7 +96,7 @@ export const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        className="w-full cursor-grab active:cursor-grabbing"
+        className="w-full cursor-grab active:cursor-grabbing touch-manipulation"
       >
         <div className="flex gap-4 sm:gap-6 justify-center items-center px-2 sm:px-4">
           {visibleProjects.map((project, idx) => {
@@ -103,11 +106,18 @@ export const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
               <Link
                 key={project.id}
                 href={`/projects/${project.slug}`}
-                className={`flex-shrink-0 transition-all duration-500 cursor-grab active:cursor-grabbing ${
+                className={`flex-shrink-0 transition-all duration-500 ${
                   isCenter
                     ? 'w-full sm:w-96 opacity-100'
                     : 'hidden sm:block sm:w-64 opacity-70 sm:opacity-60'
                 }`}
+                onClick={(e) => {
+                  // Only allow navigation if it's not a swipe gesture
+                  // The carousel will handle swipes, links handle clicks
+                  if (isDragging && Math.abs(startX - currentX) > 50) {
+                    e.preventDefault();
+                  }
+                }}
               >
                 <div className="h-full flex flex-col bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105 border border-gray-300 font-mono text-sm">
                   {/* Mac Terminal Header */}
