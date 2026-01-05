@@ -38,7 +38,7 @@ export default function Contact() {
 
                 <div className="space-y-3 sm:space-y-4">
                   {/* Email */}
-                  <a href="mailto:clarissaindrianapramesti@email.com" className="group flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg sm:rounded-xl hover:bg-gray-100 transition-all">
+                  <a href="mailto:clarissaindrianapramesti@gmail.com" className="group flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg sm:rounded-xl hover:bg-gray-100 transition-all">
                     <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-gray-300 transition-colors">
                       <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -47,7 +47,7 @@ export default function Contact() {
                     </div>
                     <div className="min-w-0">
                       <p className="text-xs sm:text-sm font-medium text-gray-600">Email</p>
-                      <p className="text-xs sm:text-sm text-gray-900 font-semibold group-hover:text-gray-700 transition-colors break-words">clarissaindrianapramesti@email.com</p>
+                      <p className="text-xs sm:text-sm text-gray-900 font-semibold group-hover:text-gray-700 transition-colors break-words">clarissaindrianapramesti@gmail.com</p>
                     </div>
                   </a>
 

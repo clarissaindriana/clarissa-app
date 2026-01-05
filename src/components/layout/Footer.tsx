@@ -14,7 +14,7 @@ export const Footer = () => {
               Clarissa
             </h3>
             <p className="text-gray-600 mb-6 max-w-md font-light leading-relaxed">
-              A passionate computer science student crafting beautiful digital experiences with elegant code and thoughtful design.
+              Driven by curiosity and a love for learning—embracing growth through exploration and new challenges.
             </p>
             <div className="flex space-x-5">
               <a
@@ -72,8 +72,8 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold text-gray-900 mb-5">Connect</h4>
             <ul className="space-y-3 text-gray-600 font-light">
               <li>
-                <a href="mailto:clarissa@email.com" className="hover:text-gray-900 transition-colors duration-300">
-                  clarissa@email.com
+                <a href="mailto:clarissaindrianapramesti@gmail.com" className="hover:text-gray-900 transition-colors duration-300">
+                  clarissaindrianapramesti@gmail.com
                 </a>
               </li>
               <li>Jakarta, Indonesia</li>

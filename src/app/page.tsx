@@ -71,11 +71,10 @@ export default function Home() {
         <Container>
           <div className="text-center px-4 relative z-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-              Let's Create Something <span className="text-gray-700">Amazing</span>
+              Let's <span className="text-gray-700">Connect</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mb-8 lg:mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-              I'm always excited about new opportunities. Whether you have a project in mind or just want to connect, let's chat!
-            </p>
+              I’m always open to learning, new ideas, and thoughtful conversations. If you’d like to connect or share perspectives, feel free to reach out!</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="w-full sm:w-auto">
                 <Button variant="primary" size="lg" className="w-full sm:w-auto">

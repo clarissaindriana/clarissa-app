@@ -16,7 +16,7 @@ export default function About() {
         }
       `}</style>
 
-      <Container className="py-10">
+      <Container className="py-20">
         <div className="max-w-5xl mx-auto">
           {/* Title - Outside Window
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-12 animate-float" style={{ animationDelay: '0.1s' }}>
@@ -43,7 +43,7 @@ export default function About() {
               {/* Left Column - Profile */}
               <div className="border-r border-gray-200 p-8 sm:p-10 flex flex-col justify-center">
                 <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                  <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
                     <span className="text-6xl">👩‍💻</span>
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-1">Clarissa</h2>
@@ -75,7 +75,7 @@ export default function About() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Who I Am</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      I’m a curious computer science student and teaching assistant at Universitas Indonesia with a strong interest in multidisciplinary learning and emerging technologies. 
+                      I’m a computer science student and teaching assistant at Universitas Indonesia with a strong interest in multidisciplinary learning and emerging technologies. 
                       I’m passionate about building systems with real social impact.
                     </p>
                   </div>
