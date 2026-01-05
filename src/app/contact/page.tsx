@@ -3,10 +3,10 @@ import { Container } from '../../components/layout/Container';
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white pt-16">
+    <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white pt-22">
       <Container>
         {/* Header */}
-        <div className="text-center my-12">
+        <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             Get In Touch
           </h1>
@@ -63,26 +63,13 @@ export default function Contact() {
                       <p className="text-xs sm:text-sm text-gray-900 font-semibold">Jakarta, Indonesia</p>
                     </div>
                   </div>
-
-                  {/* Phone */}
-                  <a href="tel:+6282113437428" className="group flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg sm:rounded-xl hover:bg-gray-100 transition-all">
-                    <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-gray-300 transition-colors">
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773c.418 1.265 1.215 2.807 2.368 4.57a1 1 0 001.088.199l1.547-.773a1 1 0 011.059.54l.74 4.435a1 1 0 01-.836.986l-2.153.122c-.78.068-1.511-.601-1.61-1.381-.23-1.82-.328-4.11.289-6.566a6.9 6.9 0 011.39-2.823c1.396-1.765 3.779-2.963 5.496-2.963m6.44 0c1.717 0 4.1 1.198 5.496 2.963a6.902 6.902 0 011.39 2.823c.617 2.456.519 4.746.289 6.566-.099.78-.83 1.449-1.61 1.381l-2.153-.122a1 1 0 01-.836-.986l.74-4.435a1 1 0 011.059-.54l1.547.773a1 1 0 001.088-.199c1.153-1.763 1.95-3.305 2.368-4.57l-1.548-.773a1 1 0 01-.54-1.06l.74-4.435a1 1 0 01.986-.836h2.153a1 1 0 011 1z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs sm:text-sm font-medium text-gray-600">Phone</p>
-                      <p className="text-xs sm:text-sm text-gray-900 font-semibold group-hover:text-gray-700 transition-colors">+62 821-1343-7428</p>
-                    </div>
-                  </a>
                 </div>
               </div>
 
               {/* Right side - Social Links */}
-              <div className="bg-white p-6 sm:p-8 lg:p-12 flex flex-col justify-center pt-16 sm:pt-20">
+              <div className="bg-white p-6 sm:p-8 lg:p-12 flex flex-col justify-center pt-8 sm:pt-16 lg:pt-20">
                 <div className="mb-8">
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Follow Me</h2>
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1">Connect</h2>
                   <p className="text-gray-600 text-xs sm:text-sm">Connect with me on social media</p>
                 </div>
 
@@ -128,13 +115,6 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
-                </div>
-
-                {/* Message hint */}
-                <div className="mt-8 p-3 sm:p-4 bg-gray-50 rounded-lg sm:rounded-xl border border-gray-200">
-                  <p className="text-xs sm:text-sm text-gray-700">
-                    <span className="font-semibold">Tip:</span> Feel free to reach out via email or call me directly!
-                  </p>
                 </div>
               </div>
             </div>
